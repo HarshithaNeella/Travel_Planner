@@ -2,12 +2,37 @@
 ### Smart AI-Powered Itinerary Generator using MCP + LLM
 ---
 
+## ❗ Problem Statement
+
+Travel planning is often manual, time-consuming, and fragmented across multiple platforms.  
+Users must search for destinations, estimate budgets, and manually create itineraries.
+
+Existing solutions either:
+- Lack personalization  
+- Do not handle natural language input effectively  
+- Rely entirely on static recommendations  
+
+### 🎯 Goal
+
+Build an intelligent system that:
+- Understands natural language queries  
+- Extracts key travel parameters (destination, budget, duration)  
+- Generates structured, optimized travel itineraries  
+- Provides flexible interaction with refinement capabilities  
+
+---
+
 ## 📖 Overview
 
 **Travel Planner AI** is an intelligent system that converts natural language input into structured, budget-aware travel itineraries.
 
 ### 🎯 Purpose
 To automate travel planning using a **hybrid architecture combining MCP (tool execution)** and **LLM (reasoning + formatting)**.
+
+
+## 🌐 Live Demo
+
+👉 https://huggingface.co/spaces/Harshitha-4/TRAVEL_ITERNARY
 
 ### ⚙️ Approach
 - 🧩 Parser extracts structured data  
@@ -80,7 +105,7 @@ Budget Tips:
 
 ⚙️ Installation
 1. Clone Repository
-git clone https://github.com/your-username/Travel_Planner.git
+git clone https://github.com/HarshithaNeella/Travel_Planner/edit/main/README.md
 cd Travel_Planner
 2. Create Virtual Environment
 python -m venv venv
@@ -88,30 +113,48 @@ venv\Scripts\activate
 3. Install Dependencies
 pip install -r requirements.txt
 4. Setup Environment Variables
-
+---
 Create .env file:
 
 GROQ_API_KEY=your_api_key
-MCP_SERVER_URL=your_mcp_server_url
 
-▶️ Usage
-Run MCP Server
-cd mcp_server
-python server.py
-Run Frontend
-streamlit run app.py
-Example Queries
-Plan a 3 day trip to Goa under 8000
-Suggest places to visit in Delhi
-Goa → 8000 → 3 days
-short / summary / precise
+MCP_SERVER_URL=your_mcp_server_url
 ---
+▶️ Usage
+
+Run MCP Server
+      
+cd mcp_server
+
+python server.py
+
+Run Frontend
+
+streamlit run app.py
+
+Example Queries
+
+Plan a 3 day trip to Goa under 8000
+
+Suggest places to visit in Delhi
+
+Goa → 8000 → 3 days
+
+
+---
+
 🛠️ Tech Stack
+
 🐍 Python
+
 🎨 Streamlit
+
 🤖 Groq LLM
+
 🔗 REST APIs
+
 ⚙️ MCP Architecture
+---
 📁 Project Structure
 
 Travel_Planner/
@@ -122,10 +165,13 @@ Travel_Planner/
 ├── app.py             # Streamlit UI
 ├── requirements.txt
 └── runtime.txt
-
+---
 ⚠️ Error Handling
+
 If MCP fails → fallback to LLM
+
 If input incomplete → ask follow-up
+
 If refinement requested → reprocess output
 
 This ensures robust and reliable responses.
