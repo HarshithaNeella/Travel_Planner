@@ -1,8 +1,5 @@
 from fastapi import FastAPI
-from dotenv import load_dotenv
 from pydantic import BaseModel
-
-load_dotenv()
 
 from mcp_server.tools.destination import get_destination_info
 from mcp_server.tools.itinerary import generate_plan
@@ -14,6 +11,11 @@ app = FastAPI()
 class ToolRequest(BaseModel):
     tool: str
     args: dict
+
+
+@app.get("/")
+def home():
+    return {"status": "MCP server running"}
 
 
 @app.post("/tool")
