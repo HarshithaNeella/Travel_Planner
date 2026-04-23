@@ -72,15 +72,25 @@ The system follows a **tool-first execution model**:
 The system uses MCP (Modular Command Protocol) for structured execution instead of relying solely on LLMs.
 
 🔧 Tools Used
+
 Tool	Purpose
+
 📅 generate_plan	Creates itinerary
+
 📍 destination_info	Provides location insights
+
 💰 budget	Handles cost logic
+
 🖼️ images	(Optional) visual enhancement
+
 ⚙️ Execution Strategy
+
 Call MCP tool
+
 Validate response
+
 If invalid → fallback to LLM
+
 Format output
 
 🧪 Sample Input & Output
@@ -159,11 +169,17 @@ Goa → 8000 → 3 days
 
 Travel_Planner/
 │
+
 ├── agent/             # Core agent logic
+
 ├── mcp_server/        # MCP backend (tools)
+
 ├── utils/             # LLM integration
+
 ├── app.py             # Streamlit UI
+
 ├── requirements.txt
+
 └── runtime.txt
 ---
 ⚠️ Error Handling
