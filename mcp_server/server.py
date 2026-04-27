@@ -8,12 +8,12 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional
 
-from src.budget import estimate_days_from_budget
-from src.destination import get_destination_info
-from src.itinerary import get_places_for_itinerary
-from src.images import get_destination_image
-from src.weather import get_weather
-from src.planner import _build_itinerary
+from mcp_server.tools.budget import estimate_days_from_budget
+from mcp_server.tools.destination import get_destination_info
+from mcp_server.tools.itinerary import get_places_for_itinerary
+from mcp_server.tools.images import get_destination_image
+from mcp_server.tools.weather import get_weather
+from mcp_server.tools.planner import _build_itinerary
 app = FastAPI(title="Smart Travel Planner MCP", version="1.0.0")
 
 
