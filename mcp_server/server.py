@@ -13,7 +13,7 @@ from mcp_server.tools.destination import get_destination_info
 from mcp_server.tools.itinerary import get_places_for_itinerary
 from mcp_server.tools.images import get_destination_image
 from mcp_server.tools.weather import get_weather
-from mcp_server.tools.planner import _build_itinerary
+
 app = FastAPI(title="Smart Travel Planner MCP", version="1.0.0")
 
 
