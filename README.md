@@ -1,67 +1,71 @@
-# 🚀 Travel Planner AI  
-### Smart AI-Powered Itinerary Generator using MCP + LLM
+🚀 Travel Planner AI
+Smart AI-Powered Itinerary Generator using MCP + LLM
+---
+❗ Problem Statement
+
+Travel planning is often manual, time-consuming, and fragmented across multiple platforms. Users must:
+
+Search destinations separately
+Estimate budgets manually
+Plan itineraries without guidance
+Limitations of Existing Systems
+❌ Lack personalization
+❌ Poor natural language understanding
+❌ Static, non-adaptive recommendations
 ---
 
-## ❗ Problem Statement
-
-Travel planning is often manual, time-consuming, and fragmented across multiple platforms.  
-Users must search for destinations, estimate budgets, and manually create itineraries.
-
-Existing solutions either:
-- Lack personalization  
-- Do not handle natural language input effectively  
-- Rely entirely on static recommendations  
-
-### 🎯 Goal
+🎯 Goal
 
 Build an intelligent system that:
-- Understands natural language queries  
-- Extracts key travel parameters (destination, budget, duration)  
-- Generates structured, optimized travel itineraries  
-- Provides flexible interaction with refinement capabilities  
 
+Understands natural language queries
+Extracts structured travel parameters
+Generates optimized itineraries
+Uses modular tools for reliable execution
+Supports interactive refinement
 ---
 
-## 📖 Overview
+📖 Overview
 
-**Travel Planner AI** is an intelligent system that converts natural language input into structured, budget-aware travel itineraries.
+Travel Planner AI converts free-text user queries into structured, budget-aware travel plans using a hybrid architecture:
 
-### 🎯 Purpose
-To automate travel planning using a **hybrid architecture combining MCP (tool execution)** and **LLM (reasoning + formatting)**.
-
-
-## 🌐 Live Demo
+🔑 Core Idea
+LLM → Understanding + Response Formatting
+MCP → Tool Execution + Orchestration
+---
+🌐 Live Demo
 
 👉 https://huggingface.co/spaces/Harshitha-4/TRAVEL_ITERNARY
-
-### ⚙️ Approach
-- 🧩 Parser extracts structured data  
-- 🗂️ State manager maintains conversation flow  
-- 🛠️ MCP executes tools for reliable outputs  
-- 🤖 LLM formats and handles fallback  
-
----
-## 💡 Features
-
-- 🧠 Natural language trip planning  
-- 📍 Destination, budget, and days extraction  
-- 📅 Multi-day itinerary generation  
-- 🔄 MCP + LLM hybrid execution  
-- 💬 Stateful conversation handling  
-- ✂️ Output refinement (short, summary, precise)  
-
 ---
 
-## 🏗️ Architecture
-
-The system follows a **tool-first execution model**:
-
-1. Parse user input  
-2. Store extracted data in state  
-3. Call MCP tools for structured execution  
-4. Use LLM for formatting or fallback  
-5. Return final itinerary
+⚙️ Approach
+🧠 LLM extracts intent and entities
+🗂️ State manager maintains conversation context
+⚙️ MCP orchestrates tool execution
+🔄 Fallback ensures robustness
+✨ LLM formats final response
 ---
+💡 Features
+🧠 Natural language trip planning
+📍 Extracts destination, budget, duration
+📅 Multi-day itinerary generation
+🔄 MCP-based modular execution
+💬 Stateful multi-turn interaction
+✂️ Output refinement (summary / detailed)
+🛡️ Fault-tolerant execution 
+
+---
+🏗️ Architecture
+
+The system follows a tool-first orchestration model:
+
+🔄 Workflow
+User provides input
+LLM extracts structured data
+MCP selects & executes tools
+Tool outputs are aggregated
+LLM formats final response
+
 
 ## 🔄 Component-Level Workflow
   
@@ -69,7 +73,12 @@ The system follows a **tool-first execution model**:
 
 🧠 MCP Layer
 
-The system uses MCP (Modular Command Protocol) for structured execution instead of relying solely on LLMs.
+MCP (Modular Command Protocol) enables:
+
+Tool selection
+Execution routing
+Failure handling
+Modular scalability
 
 🔧 Tools Used
 
