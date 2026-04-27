@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from mcp_server.tools.destination import get_destination_info
-from mcp_server.tools.budget import estimate_days
+from mcp_server.tools.budget import estimate_days_from_budget
 from mcp_server.tools.itinerary import generate_plan
 
 app = FastAPI()
